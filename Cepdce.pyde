@@ -1,0 +1,8 @@
+size(600,600)
+noStroke()
+translate(300,200)
+fill(300,0,0)
+rotate(radians(45))
+rect(30,20,60,60)
+ellipse(60,20,60,60)
+ellipse(30,50,60,60)
