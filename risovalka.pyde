@@ -11,6 +11,7 @@ def setup():
 def draw():
     global bg
     global sw
+    strokeWeight(5)
     fill(1)
     text(u"Стереть",37,100)
     text(u"Линия толще",123,100)
@@ -20,14 +21,15 @@ def draw():
     rect(225,25,75,50)
      
     if mousePressed == True:
-
-        line(mouseX,mouseY,mouseX,mouseY)
+        strokeWeight(sw)
+        line(pmouseX,pmouseY,mouseX,mouseY)
         if mouseX > 25 and mouseX < 100 and mouseY > 25 and mouseY < 75:
             background(250)
         if mouseX > 125 and mouseX < 200 and mouseY > 25 and mouseY < 125:
             sw = sw + 1 
         if mouseX > 225 and mouseX < 300 and mouseY > 25 and mouseY < 125:
             sw = sw - 1 
-            
+            if sw == 0:
+                sw = 1
     else:
         bg = 250
