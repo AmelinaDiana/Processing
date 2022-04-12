@@ -23,6 +23,7 @@ def draw():
     global y
     global z
     fill(1)
+    strokeWeight(3)
     text(u"Стереть",25,70)
     text(u"Линия толще",110,70)
     text(u"Линия тоньше",210,70)
