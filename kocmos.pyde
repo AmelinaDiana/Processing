@@ -1,16 +1,18 @@
-a = 0
-b = 0
+
 def setup():
     size(800,800)
     background(25,25,112)
     frameRate(100)
    
 def draw():
-    global a,b
+    frameRate(3)
+    strokeWeight(random(1,5))
+    stroke(255) 
+    point(random(0,800),random(0,800))
     stroke(1) 
     strokeWeight(3)
     fill(255,215,0)
-    ellipse(a+50,b+50,150,150)
+    ellipse(50,50,150,150)
     fill(30,144,255)
     ellipse(700,150,150,150)
     fill(0,128,0)
@@ -36,17 +38,14 @@ def draw():
     ellipse(160,390,40,40)
     fill(1)
     rect(125,440,70,150) 
-    frameRate(3)
-    strokeWeight(random(1,5))
-    stroke(255) 
-    point(random(0,800),random(0,800))
+    
     if mousePressed:
         if mouseX > 125 and mouseX < 195 and mouseY > 440 and mouseY < 590:
             
             strokeWeight(3)
             stroke(1) 
             ellipse(400,400,50,150)    
-            ellipse(400,300,50,50)
+            ellipse(400,300,70,70)
             translate(370,500)
             rotate(radians(25))
             ellipse(0,0,25,120)
